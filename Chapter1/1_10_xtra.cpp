@@ -9,25 +9,22 @@ using namespace std;
 int main() {
     int A, B;
     cin >> A >> B;
-    int i = 1;
+    int i = 0;
     // ここにプログラムを追記
     cout << "A:";
-    if(1 <= A){
-        while(i <= A){
-            cout << "]";
-            i++;
-        }
+
+    while(i < A){
+        cout << "]";
+        i++;
     }
     cout << endl;
 
     i=0;
 
     cout << "B:";
-    if(1 <= B){
-        while(i <= B){
-            cout << "]";
-            i++;
-        }
+    while(i < B){
+        cout << "]";
+        i++;
     }
     cout << endl;
 }
