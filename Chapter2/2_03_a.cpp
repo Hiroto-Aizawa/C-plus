@@ -1,4 +1,4 @@
-// 
+// https://atcoder.jp/contests/APG4b/tasks/APG4b_t
 
 // 【多次元配列】
 
@@ -75,7 +75,7 @@ int main() {
 //     }
 //   }
 
-   cout << count << endl;
+  cout << count << endl;
 
 }
 
@@ -274,7 +274,7 @@ int main() {
     }
   }
 
-   cout << count << endl;
+  cout << count << endl;
 }
 
 
