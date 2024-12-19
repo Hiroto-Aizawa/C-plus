@@ -12,3 +12,29 @@ A 個口の電源タップ 1 つと未使用の差込口 1 口を使って、新
 ・2 ≤ A ≤ 20
 ・1 ≤ B ≤ 20
 */
+
+#pragma region 提出版
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+  int A, B;
+  cin >> A >> B;
+  
+  // 電源タップ数
+  int cnt = 0;
+  // 差込口の数
+  int slot= 1;
+  // 増加量 increment
+  int i = A - 1;
+
+  while(slot < B){
+    slot += i;
+    cnt++;
+  }
+  
+  cout << cnt << endl;
+}
+
+#pragma endregion
