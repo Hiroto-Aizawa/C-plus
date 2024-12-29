@@ -85,3 +85,69 @@ int main(){
     
     cout << "No";
 }
+
+#pragma region 公式解説
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int k;
+    string s,t;
+    cin >> k >> s >> t;
+    if(s==t){
+        cout << "Yes\n";
+        return 0;
+    }
+
+    int sl=s.size();
+    int tl=t.size();
+
+    if(sl==tl){
+      // modify
+        int c=0;
+        for(int i=0;i<sl;i++){
+        if(s[i]!=t[i]){c++;}
+        }
+        if(c<=1){cout << "Yes\n";}
+        else{cout << "No\n";}
+    }
+    else if(sl+1==tl){
+      // insert
+        int pc=0,sc=0;
+        while(pc<sl){
+        if(s[pc]==t[pc]){pc++;}
+        else{break;}
+        }
+        while(sc<sl){
+        if(s[sl-1-sc]==t[tl-1-sc]){sc++;}
+        else{break;}
+        }
+        if(pc+sc>=sl){cout << "Yes\n";}
+        else{cout << "No\n";}
+    }
+    else if(sl-1==tl){
+      // erase
+        swap(s,t);
+        swap(sl,tl);
+        int pc=0,sc=0;
+        while(pc<sl){
+        if(s[pc]==t[pc]){pc++;}
+        else{break;}
+        }
+        while(sc<sl){
+        if(s[sl-1-sc]==t[tl-1-sc]){sc++;}
+        else{break;}
+        }
+        if(pc+sc>=sl){cout << "Yes\n";}
+        else{cout << "No\n";}
+    }
+    else{
+        cout << "No\n";
+    }
+    return 0;
+}
+
+
+#pragma endregion
