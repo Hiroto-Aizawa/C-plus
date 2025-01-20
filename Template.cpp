@@ -4,6 +4,12 @@
 // #include <algorythm>
 using namespace std;
 
+/*エイリアス*/
+using ll = long long;
+using vi = vector<int>;
+using vvi = vector<vi>;
+using vs = vector<string>;
+
 /* マクロ */
 // 関数
 #define rep(i, a, n) for (int i=a; i < n; i++)
