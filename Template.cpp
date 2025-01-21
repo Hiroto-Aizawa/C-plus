@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 //-------------------------------------------
+// #include <iostream>
 // #include <vector>
 // #include <algorythm>
 using namespace std;
@@ -31,7 +32,11 @@ int digit_sum(int n) {
     return sum;
 }
 
-#pragma region main
+/*
+///////////////////////////////////////////
+/////////////////// MAIN //////////////////
+///////////////////////////////////////////
+*/
 
 int main() {
     // int n;
@@ -40,10 +45,8 @@ int main() {
     // string s;
     // cin >> s;
     
-    // vector<int> a(n);
+    // vi a(n, 0);
     // rep(i, 0, n) cin >> a[i];
     
     return 0;
 }
-
-#pragma endregion
