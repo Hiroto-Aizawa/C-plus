@@ -33,34 +33,32 @@ ci = m∑j=1 aij_bj = ai1_b1 + ai2_b2 + ... + aim_bm
 */
 
 #include <iostream>
+#include <vector>
 #include <algorithm>
 using namespace std;
 
 int main() {
-    int n,m, ans;
+    int n,m;
     cin >> n >> m;
     
-    int aij, bi;
-    // n行 x m列の行列
-    // int a[n][m];
-    // int b[n];
-    int ans[n];
+    vector<int> ans(n);
+    vector<vector<int>> a(n, vector<int>(m) );
+    vector<int> b(m);
     
     for(int i=0; i < n; i++) {
         for(int j=0; j < m; j++) {
-            cin >> aij;
-            //a[i][j] = aij;
-            //cout << aij << " ";
-            if(aij != 0) ans[i] += aij;
+            cin >> a[i][j];
         }
-        cout << ans[i] << endl;
-        //cout << endl;
+    }
+
+    for(int i=0; i < m; i++) {
+      cin >> b[i];
     }
     
-    // for(int i=0; i < n; i++) {
-    //     cin >> bi;
-    //     //b[i] = bi;
-    //     ans[i] += bi;
-    //     cout << ans[i] << endl;
-    // }
+    for(int i=0; i < n; i++) {
+      for(int j=0; j < m; j++) {
+        ans[i] += a[i][j] * b[j];
+      }
+      cout << ans[i] << endl;
+    }
 }
