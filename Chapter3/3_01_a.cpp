@@ -1,4 +1,4 @@
-// 
+// https://atcoder.jp/contests/apg4b/tasks/APG4b_y
 
 // 【数値型】
 
