@@ -9,7 +9,10 @@ using namespace std;
 using ll = long long;
 using vi = vector<int>;
 using vvi = vector<vi>;
+using vl = vector<long long>;
+using vvl = vector<vl>;
 using vs = vector<string>;
+using vvs = vector<vs>;
 
 /* マクロ */
 // 関数
@@ -41,12 +44,12 @@ int digit_sum(int n) {
 int main() {
     // int n;
     // cin >> n;
-    
+
     // string s;
     // cin >> s;
-    
+
     // vi a(n, 0);
     // rep(i, 0, n) cin >> a[i];
-    
+
     return 0;
 }
