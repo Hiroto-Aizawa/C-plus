@@ -40,8 +40,8 @@ int digit_sum(string s) {
     int sum = 0;
     
     for(char c : s) {
-      //intへキャスト
-      sum += c - '0';
+        //intへキャスト
+        sum += c - '0';
     }
     return sum;
 }
