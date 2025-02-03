@@ -7,20 +7,6 @@
 与えられた文字列の小文字と大文字を入れ替えるプログラムを作成してください。
 */
 
-// https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/7
-
-// 【Matrix Multiplication】
-/*
-行列の積
-
-n×m の行列 A と m×l の行列 B を入力し、それらの積である n×l の行列 C を出力するプログラムを作成してください。
-行列 C の各要素 cij は次の式で得られます：
-
-cij= m∑k=1 aik bkj
-
-ここで、A、B、C の各要素をそれぞれ aij、bij、cij とします。
-*/
-
 #include <bits/stdc++.h>
 //-------------------------------------------
 // #include <iostream>
