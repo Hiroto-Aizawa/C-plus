@@ -1,13 +1,3 @@
-// https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/7
-
-// 【Counting Character】
-/*
-文字のカウント
-
-与えられた文字列の列に含まれる、各アルファベットの数を数えるプログラムを作成して下さい。 
-なお、小文字と大文字は区別しません。
-*/
-
 #include <bits/stdc++.h>
 //-------------------------------------------
 // #include <iostream>
@@ -76,7 +66,7 @@ int main() {
     
     // アルファベットA~Zまで出力するループ  
     for(char c='a'; c <= 'z'; ++c) {
-      cout << c << ':' << count[c] << endl;
+      cout << c << " : " << count[c] << endl;
     }
     
     return 0;
