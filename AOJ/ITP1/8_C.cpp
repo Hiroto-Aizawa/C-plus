@@ -1,3 +1,13 @@
+// https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/8/ITP1_8_C
+
+// 【Counting Character】
+/*
+文字のカウント
+
+与えられた文字列の列に含まれる、各アルファベットの数を数えるプログラムを作成して下さい。 
+なお、小文字と大文字は区別しません。
+*/
+
 #include <bits/stdc++.h>
 //-------------------------------------------
 // #include <iostream>
