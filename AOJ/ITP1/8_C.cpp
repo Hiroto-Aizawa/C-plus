@@ -1,10 +1,11 @@
-// https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/8/ITP1_8_B
+// https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/8/ITP1_8_C
 
-// 【Sum of Numbers】
+// 【Counting Character】
 /*
-数字の和
+文字のカウント
 
-与えられた数の各桁の和を計算するプログラムを作成して下さい。
+与えられた文字列の列に含まれる、各アルファベットの数を数えるプログラムを作成して下さい。 
+なお、小文字と大文字は区別しません。
 */
 
 #include <bits/stdc++.h>
@@ -60,14 +61,23 @@ int digit_sum(string s) {
 */
 
 int main() {
-    while(true) {
-      string s;
-      cin >> s;
-      
-      if(s == "0") break;
-      
-      int ans = digit_sum(s);
-      cout << ans << endl;
+    map<char, int> count;
+    string s;
+    
+    while(getline(cin, s) ){
+      for(char c : s) {
+        // アルファベットをカウント
+        if(isalpha(c)) {
+          // 小文字に変換してカウント
+          count[tolower(c)]++;
+        }
+      }
     }
+    
+    // アルファベットA~Zまで出力するループ  
+    for(char c='a'; c <= 'z'; ++c) {
+      cout << c << " : " << count[c] << endl;
+    }
+    
     return 0;
 }
