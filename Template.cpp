@@ -46,6 +46,11 @@ int digit_sum(string s) {
     return sum;
 }
 
+// 文字列サイズの比較関数
+bool compare(string & s1, string& s2) {
+    return s1.size() < s2.size();
+}
+
 /*
 ///////////////////////////////////////////
 /////////////////// MAIN //////////////////
