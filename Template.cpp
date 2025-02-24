@@ -5,16 +5,23 @@
 // #include <algorythm>
 using namespace std;
 
-/*エイリアス*/
+/*【エイリアス】*/
 using ll = long long;
+// vector
 using vi = vector<int>;
 using vvi = vector<vi>;
 using vl = vector<long long>;
 using vvl = vector<vl>;
 using vs = vector<string>;
 using vvs = vector<vs>;
+// pair
+using psi = pair<string, int>;
+using pii = pair<int, int>;
+// tuple
+using tsii = tuple<string, int, int>;
+using tiii = tuple<int, int, int>;
 
-/* マクロ */
+/* 【マクロ】 */
 // 関数
 #define rep(i, a, n) for (int i=a; i < n; i++)
 #define REP(i, a, n) for (int i=a; i <= n; i++)
