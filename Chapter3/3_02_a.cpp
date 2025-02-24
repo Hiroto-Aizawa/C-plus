@@ -28,6 +28,8 @@
 
 // 【pair/tuple】
 // [pair]
+// pairは2つの値で組を表す型です。
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -39,6 +41,7 @@ int main() {
   cout << p.first << endl;  // hello
   cout << p.second << endl; // 3
 
+  // pairの作成
   p = make_pair("*", 1);
 
   string s;
@@ -53,6 +56,7 @@ int main() {
 　3
 　*
 　1
+
   */
 }
 
@@ -83,4 +87,70 @@ pair<型1, 型2>(値1, 値2)
 tie(変数1, 変数2) = pair型の値;
 
 変数1、変数2にそれぞれpairの1番目の値、2番目の値が代入されます。
+*/
+
+
+//[tuple]
+//tupleはpairを一般化したもので、「複数個の値の組を表す型です。
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  tuple<int, string, bool> data(1, "hello", true);
+  get<2>(data) = false;
+  cout << get<1>(data) << endl;  // hello
+
+  // tupleの作成
+  data = make_tuple(2, "WORLD", true);
+
+  int a;
+  string s;
+  bool f;
+  // tupleの分解
+  tie(a, s, f) = data;
+  cout << a << " " << s << " " << f << endl;  // 2 WORLD 1
+  /*
+  【実行結果】
+  hello
+  2 WORLD 1
+  */
+}
+
+/*
+[宣言・初期化]
+```
+tuple<型1, 型2, 型3, ...(必要な分だけ型を書く)> 変数名;
+tuple<型1, 型2, 型3, ...(必要な分だけ型を書く)> 変数名(値1, 値2, 値3, ...); // 初期化
+```
+
+tupleでは0個以上の組を表現することができます。
+
+[アクセス]
+```get<K>(tuple型の変数)  // K(定数)番目にアクセス```
+
+Kは定数でなければならないことと、Kは0から始まる数であることに注意してください。
+
+次のように、Kとして変数を用いることはできません。
+
+```
+int i = 0;
+tuple<int, int> t{1, 10};
+cout << get<i>(t) << endl;　//コンパイルエラー
+```
+
+[tupleの生成]
+```make_tuple(値1, 値2, 値3, ...) ```
+
+以下のようにして生成することもできます。
+```tuple<型1, 型2, 型3, ...(必要な分だけ書く)>(値1, 値2, 値3, ...) ```
+
+[tupleの分解]
+```
+型1 変数1;
+型2 変数2;
+型3 変数3;
+︙
+tie(変数1, 変数2, 変数3, ...) = tuple型の値;
+```
 */
