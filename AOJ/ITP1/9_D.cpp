@@ -88,22 +88,26 @@ int main() {
         string order;
         int a, b;
         cin >> order >> a >> b;
-        cout << "i: " << i << endl;
+        
         if(order == "print") {
-            //s.substr(0, 2)だとabとなり、問題の命令ではabcを出力するのが正しい
-            // このギャップを解消するために開始位置が0の時だけ、
-            // 抽出する長さを＋1するようにしている
-            cout << s.substr(a, b - a + 1) << endl;
+          // s = abcde, a = 0, b = 2 の場合
+          // s.substr(a, b)だとabとなるが、問題の命令ではabcを出力するのが正しい
+          // このギャップを解消するために開始位置が0の時だけ、
+          // 抽出する長さを＋1するようにしている
+          cout << s.substr(a, b - a + 1) << endl;
         } else if(order == "reverse") {
-            string replaceT;
-            cin >> replaceT;
-            reverse(s.begin() + a, s.end() + b + 1);
-            cout << "reverse: " << s << endl;
+          // s = abcde, a = 0, b = 2 の場合
+          // reverse(s.begin() + a, s.begin() + b)だと0~2番目ではなく、0を始点に長さ2を逆順にする
+          // 期待している出力がcbadeの場合に、bacdeが出力される
+          // そのため、reverse(s.begin() + a, s.begin() + b + 1)
+          // にして期待している出力が行われるようにしている
+          reverse(s.begin() + a, s.begin() + b + 1);
+          //cout << "reverse: " << s << endl;
         } else {
-            string t;
-            cin >> t;
-            s.replace(a, b - a + 1, t);
-            cout << "replace: " << s << endl;
+          string t;
+          cin >> t;
+          s.replace(a, b - a + 1, t);
+          //cout << "replace: " << s << endl;
         }
     }
     
