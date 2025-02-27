@@ -20,6 +20,22 @@ vector<string> s(4); //長さが4の配列を作成
 vector<string> s = {"apple", "bus", "cat", "dice"};
 ```
 
+## for 文
+
+```
+string str = "test";
+// 範囲for文
+for(char c : str) {
+    cout << c << endl;
+    /*
+    t
+    e
+    s
+    t
+    */
+}
+```
+
 ## 並び替え
 
 ```
