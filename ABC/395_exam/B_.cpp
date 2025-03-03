@@ -154,7 +154,7 @@ int main() {
 #pragma endregion
 
 #pragma region 解答
-
+// https://www.youtube.com/live/rzPy_MyIv6M?si=SybrFgyeGUDRNIQx&t=1473
 #include <bits/stdch++.h>
 usign namespace std;
 #define rep(i, n) for(int i = 0; i < (n); i++)
