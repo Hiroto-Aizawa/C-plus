@@ -26,7 +26,7 @@ int main(){
     // TLE（制限時間超過）
 }
 
-#pragma region 公式解答
+#pragma region 公式解答（動画）
 // 解説動画
 // https://www.youtube.com/watch?v=UWoRBhN2s6Y&t=1825s
 
@@ -52,4 +52,63 @@ int main() {
     }
     cout << ans << endl;
 }
+#pragma endregion
+
+#pragma region 解答（二分探索）
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    vector<int> A(N);
+    for (auto&& a : A)
+        cin >> a;
+
+    long ans = 0;
+    for (const auto a : A)
+        // a / 2 以下の餅の個数 = a / 2 を超える餅と先頭との距離
+        ans += ranges::upper_bound(A, a / 2) - begin(A);
+
+    // 合計が答え
+    cout << ans << endl;
+
+    return 0;
+}
+
+#pragma endregion
+
+#pragma region 解答（尺取り法）
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    vector<int> A(N);
+    for (auto&& a : A)
+        cin >> a;
+
+    long ans = 0;
+    // a / 2 より大きい最初の要素（なければ最後の次）を表す値 j
+    for (int j = 0; const auto a : A) {
+        // 越えるまで進める
+        while (j < N && A[j] * 2 <= a) j++;
+        ans += j;
+    }
+
+    cout << ans << endl;
+
+    return 0;
+}
+
 #pragma endregion
