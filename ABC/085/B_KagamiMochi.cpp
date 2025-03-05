@@ -40,3 +40,27 @@ int main() {
   }
   cout << cnt << endl;
 }
+
+#pragma region 解答
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+#define rep(i,a,n) for(int i=a; i < n; i++)
+int main() {
+  int n, d[101];
+  cin >> n;
+
+  rep(i, 0, n) cin >> d[i];
+
+  set<int> se;
+  rep(i,0,n) se.insert(d[i]);
+
+  int ans = se.size();
+  cout << ans << endl;
+
+}
+
+#pragma endregion
+
